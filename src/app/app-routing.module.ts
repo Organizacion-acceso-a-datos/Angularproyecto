@@ -10,7 +10,11 @@ const routes: Routes = [
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
+  },  {
+    path: 'crud',
+    loadChildren: () => import('./crud/crud.module').then( m => m.CrudPageModule)
   },
+
 ];
 
 @NgModule({
