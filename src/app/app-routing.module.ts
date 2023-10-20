@@ -10,12 +10,20 @@ const routes: Routes = [
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
-  },  {
+  },
+  {
     path: 'crud',
     loadChildren: () => import('./crud/crud.module').then( m => m.CrudPageModule)
   },
-
+  
+  {
+    path: 'about',
+    loadChildren: () => import('./about/about.module').then( m => m.AboutPageModule)
+  },
+ 
+  
 ];
+
 
 @NgModule({
   imports: [
