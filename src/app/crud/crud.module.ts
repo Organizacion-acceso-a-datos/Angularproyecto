@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { CrudPageRoutingModule } from './crud-routing.module';
 
 import { CrudPage } from './crud.page';
+import { NavegadorComponent } from '../navegador/navegador.component';
 
 @NgModule({
   imports: [
@@ -15,6 +16,6 @@ import { CrudPage } from './crud.page';
     IonicModule,
     CrudPageRoutingModule
   ],
-  declarations: [CrudPage]
+  declarations: [CrudPage, NavegadorComponent]
 })
 export class CrudPageModule {}
