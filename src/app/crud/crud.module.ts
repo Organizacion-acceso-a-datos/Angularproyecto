@@ -11,7 +11,6 @@ import { SharedModule } from '../shared/shared.module';
     SharedModule,
     CrudPageRoutingModule
   ],
-  declarations: [CrudPage,],
-  exports: [NavegadorComponent]
+  declarations: [CrudPage]
 })
 export class CrudPageModule {}
