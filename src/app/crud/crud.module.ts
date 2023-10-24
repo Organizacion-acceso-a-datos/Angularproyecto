@@ -16,6 +16,7 @@ import { NavegadorComponent } from '../navegador/navegador.component';
     IonicModule,
     CrudPageRoutingModule
   ],
-  declarations: [CrudPage, NavegadorComponent]
+  declarations: [CrudPage,],
+  exports: [NavegadorComponent]
 })
 export class CrudPageModule {}
