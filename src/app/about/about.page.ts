@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Autor } from './autor';
 
 @Component({
   selector: 'app-about',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutPage implements OnInit {
 
-  constructor() { }
+  public autores:Autor[] = [];
+
+  constructor(
+  ) { }
 
   ngOnInit() {
+    this.autores = [
+      {nombre:"Borja", apellidos:"Bravo Casermeiro", edad:22, cuentaGit:"boorjabraavo21"}
+    ];
   }
-
 }
