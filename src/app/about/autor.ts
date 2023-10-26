@@ -1,4 +1,4 @@
-export interface Autores {
+export interface Autor {
     nombre:string,
     apellidos:string,
     edad:number,

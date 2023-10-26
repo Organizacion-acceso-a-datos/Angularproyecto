@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Autor } from '../autor';
 
 @Component({
   selector: 'app-autores',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./autores.component.scss'],
 })
 export class AutoresComponent  implements OnInit {
+
+  @Input() autor?:Autor | null
 
   constructor() { }
 

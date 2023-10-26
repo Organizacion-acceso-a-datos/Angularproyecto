@@ -2,6 +2,7 @@
     <ion-toolbar>
         <ion-title>about</ion-title>
     </ion-toolbar>
+    <app-navegador></app-navegador>
 </ion-header>
 
 <ion-content [fullscreen]="true">
@@ -10,9 +11,7 @@
             <ion-title size="large">about</ion-title>
         </ion-toolbar>
     </ion-header>
-    <app-navegador></app-navegador>
     <div id="autores">
-        <app-autores></app-autores>
-        <app-autores></app-autores>
+        <app-autores *ngFor="let autor of autores" [autor]="autor"></app-autores>
     </div>
 </ion-content>
