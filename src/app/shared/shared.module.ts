@@ -7,7 +7,6 @@ import { RouterModule } from '@angular/router';
 import { AutoresComponent } from '../about/autores/autores.component';
 
 
-
 @NgModule({
   declarations: [NavegadorComponent, AutoresComponent],
   imports: [
