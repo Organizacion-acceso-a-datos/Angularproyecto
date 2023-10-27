@@ -15,8 +15,8 @@ export class AboutPage implements OnInit {
 
   ngOnInit() {
     this.autores = [
-      {nombre:"Borja", apellidos:"Bravo Casermeiro", edad:22, cuentaGit:"boorjabraavo21"},
-      {nombre:"Javier", apellidos:"Moreno Rodríguez", edad:21, cuentaGit:"Javiemr"}
+      {nombre:"Borja", foto:"../../../assets/img/img1.png", apellidos:"Bravo Casermeiro", edad:22, cuentaGit:"boorjabraavo21"},
+      {nombre:"Javier", foto:"../../../assets/img/img1.png", apellidos:"Moreno Rodríguez", edad:21, cuentaGit:"Javiemr"}
     ];
   }
 }
