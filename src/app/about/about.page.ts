@@ -14,9 +14,9 @@ export class AboutPage implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.autores = [
-      {nombre:"Borja", foto:"../../../assets/img/F9M3iu2WQAEoC_Q.jpg", apellidos:"Bravo Casermeiro", edad:22, cuentaGit:"boorjabraavo21"},
-      {nombre:"Javier", foto:"../../../assets/img/F9M3iu2WQAEoC_Q.jpg", apellidos:"Moreno Rodríguez", edad:21, cuentaGit:"Javiemr"}
+    var autores = [
+      {nombre:"Borja", foto: "../../assets/img/F9M3iu2WQAEoC_Q.jpg", apellidos:"Bravo Casermeiro", edad:22, cuentaGit:"boorjabraavo21"},
+      {nombre:"Javier", foto: "../../assets/img/F9M3iu2WQAEoC_Q.jpg", apellidos:"Moreno Rodríguez", edad:21, cuentaGit:"Javiemr"}
     ];
   }
 }
