@@ -12,6 +12,6 @@
         </ion-toolbar>
     </ion-header>
     <div id="autores">
-        <app-autores *ngFor="let autor of autores" [autor]="autor"></app-autores>
+        <app-autores *ngFor="let autor of autores$ | async" [autor]="autor"></app-autores>
     </div>
 </ion-content>
