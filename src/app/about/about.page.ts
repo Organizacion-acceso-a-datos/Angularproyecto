@@ -9,7 +9,7 @@ import { BehaviorSubject, Observable } from 'rxjs';
 })
 export class AboutPage implements OnInit {
 
-  private _autores:BehaviorSubject<Autor[]> = new BehaviorSubject<Autor[]>([]);
+  private _autores:BehaviorSubject<Autor[]> = new BehaviorSubject<Autor[]>([])
   public autores$:Observable<Autor[]> = this._autores.asObservable();
 
   constructor(
