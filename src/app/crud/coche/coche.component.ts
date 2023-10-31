@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Coche } from '../coche';
 
 @Component({
   selector: 'app-coche',
@@ -7,6 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CocheComponent  implements OnInit {
 
+  coche: Coche[] = [
+    {marca: 'Toyota', modelo: 'Corolla', color:'Rojo'},
+    {marca: 'Honda', modelo:'Civic', color:'Azul'}
+  ]
   constructor() { }
 
   ngOnInit() {}
