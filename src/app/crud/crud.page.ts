@@ -12,7 +12,7 @@ export class CrudPage implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.coches.getAll()
+    this.coches.getAll().subscribe()
   }
 
 }
