@@ -8,7 +8,7 @@ import { Coche } from '../coche';
 })
 export class CocheComponent  implements OnInit {
 
-  coche: Coche[] = [
+  coches: Coche[] = [
     {marca: 'Toyota', modelo: 'Corolla', color:'Rojo'},
     {marca: 'Honda', modelo:'Civic', color:'Azul'}
   ]
