@@ -5,26 +5,6 @@
     <app-navegador></app-navegador>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-    <ion-header collapse="condense">
-        <ion-toolbar>
-            <ion-title size="large">crud</ion-title>
-        </ion-toolbar>
-    </ion-header>
-</ion-content>
-<table>
-    <thead>
-        <tr>
-            <th>Marca</th>
-            <th>Modelo</th>
-            <th>Color</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let coche of coches">
-            <td>{{ coche.marca }}</td>
-            <td>{{ coche.model }}</td>
-            <td>{{ coche.color }}</td>
-        </tr>
-    </tbody>
-</table>
+<div id="coches">
+    <tr *NgFor="let coche of coches"></tr>
+</div>
