@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CocheService } from './coche.service';
 
 @Component({
   selector: 'app-crud',
@@ -6,10 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./crud.page.scss'],
 })
 export class CrudPage implements OnInit {
-
-  constructor() { }
+  constructor(
+    public coches:CocheService
+  ) { }
 
   ngOnInit() {
+    this.coches.getAll().subscribe()
   }
 
 }
