@@ -9,8 +9,8 @@ import { Coche } from '../coche';
 export class CocheComponent  implements OnInit {
 
   coches: Coche[] = [
-    {marca: 'Toyota', modelo: 'Corolla', color:'Rojo'},
-    {marca: 'Honda', modelo:'Civic', color:'Azul'}
+    {id:1,marca: 'Toyota', modelo: 'Corolla', color:'Rojo'},
+    {id:2,marca: 'Honda', modelo:'Civic', color:'Azul'}
   ]
   constructor() { }
 
