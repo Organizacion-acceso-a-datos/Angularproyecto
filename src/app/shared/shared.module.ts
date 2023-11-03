@@ -5,14 +5,13 @@ import { FormsModule } from '@angular/forms';
 import { NavegadorComponent } from '../navegador/navegador.component';
 import { RouterModule } from '@angular/router';
 import { AutoresComponent } from '../about/autores/autores.component';
-import { CocheService } from '../crud/coche.service';
 
 
 @NgModule({
-  declarations: [NavegadorComponent, AutoresComponent, CocheService],
+  declarations: [NavegadorComponent, AutoresComponent],
   imports: [
     CommonModule, IonicModule, FormsModule, RouterModule
   ],
-  exports: [CommonModule, IonicModule, FormsModule, NavegadorComponent, AutoresComponent, CocheService]
+  exports: [CommonModule, IonicModule, FormsModule, NavegadorComponent, AutoresComponent]
 })
 export class SharedModule { }
