@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Coche } from '../coche';
 
 @Component({
@@ -8,12 +8,20 @@ import { Coche } from '../coche';
 })
 export class CocheComponent  implements OnInit {
 
-  coches: Coche[] = [
-    {id:1,marca: 'Toyota', modelo: 'Corolla', color:'Rojo'},
-    {id:2,marca: 'Honda', modelo:'Civic', color:'Azul'}
-  ]
+  @Input() coche?: Coche | null
+  @Output() onCardClicked:EventEmitter<void> = new EventEmitter<void>()
+  @Output() onDeleteClicked:EventEmitter<void> = new EventEmitter<void>()
+  
   constructor() { }
 
   ngOnInit() {}
 
+  onCardClick() {
+    this.onCardClicked.emit()
+  }
+
+  onDeleteClick(event:any) {
+    this.onDeleteClicked.emit()
+    event.stopPropagation()
+  }
 }

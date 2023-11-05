@@ -27,15 +27,16 @@ export class CocheService {
     var _coche:any = {
       marca:coche.marca,
       modelo:coche.modelo,
-      color:coche.color
+      color:coche.color,
+      foto:coche.foto
     }
-    return this.http.post<Coche>(environment.apiUrl+"/coches",_coche).pipe(tap(_=>{
+    return this.http.post<Coche>(environment.apiUrl+"/coches/",_coche).pipe(tap(_=>{
       this.getAll().subscribe();
     }))
   }
 
   public getAll():Observable<Coche[]> {
-    return this.http.get<Coche[]>(environment.apiUrl+"/coches").pipe(tap((coches:any[]) => {
+    return this.http.get<Coche[]>(environment.apiUrl+"/coches/").pipe(tap((coches:any[]) => {
       this._coches.next(coches)
     }))
     /*return new Observable(obs => {
@@ -67,11 +68,12 @@ export class CocheService {
 
   public updateCoche(coche:Coche):Observable<Coche> {
     return new Observable(obs => {
-      this.http.patch<Coche>(environment.apiUrl+`/coche/${coche.id}`,coche).subscribe(_=>{
+      this.http.patch<Coche>(environment.apiUrl+`/coches/${coche.id}`,coche).subscribe(_=>{
         this.getAll().subscribe(_=>{
           obs.next(coche)
         })
       })
+      obs.complete()
     })
     /*return new Observable(obs => {
       var coches = [...this._coches.value]
@@ -88,11 +90,12 @@ export class CocheService {
   }
   public deleteCoche(coche:Coche):Observable<Coche> {
     return new Observable(obs => {
-      this.http.delete<Coche>(environment.apiUrl+`/coche/${coche.id}`).subscribe(_=> {
+      this.http.delete<Coche>(environment.apiUrl+`/coches/${coche.id}`).subscribe(_=> {
         this.getAll().subscribe(_=> {
           obs.next(coche)
         })
       })
+      obs.complete()
     })
     /*return new Observable(obs => {
       var coches = [...this._coches.value]

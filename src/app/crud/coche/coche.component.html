@@ -1,3 +1,10 @@
-<p>
-  coche works!
-</p>
+<ion-card id="coche" (click)="onCardClick()">
+  <ion-button class="close-button" fill="clear" aria-label="Delete" (click)="onDeleteClick($event)">
+    <ion-icon slot="icon-only"  color="primary" name="trash" aria-hidden="true"></ion-icon>
+  </ion-button>
+  <ion-card-header>
+    <img *ngIf="coche && coche.foto" alt="Silhouette of a person's head" [src]="coche.foto" />
+    <ion-card-title>{{coche?.marca}} {{coche?.modelo}}</ion-card-title>
+    <ion-card-subtitle>Color: {{coche?.color}}</ion-card-subtitle>
+  </ion-card-header>
+</ion-card>

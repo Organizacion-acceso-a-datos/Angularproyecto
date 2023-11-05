@@ -11,20 +11,12 @@
             <ion-title size="large">crud</ion-title>
         </ion-toolbar>
     </ion-header>
+    <ion-button fill="clear" aria-label="New Car" (click)="onNewCoche()" id="añadir">
+        <ion-icon slot="icon-only"  color="primary"  name="add-outline" aria-hidden="true"></ion-icon>
+      </ion-button>
+    <div id="coches">
+        <app-coche *ngFor = "let coche of coches.coches$ | async" [coche]="coche" 
+        (onCardClicked)="onCardClicked(coche)"
+        (onDeleteClicked)="onDeleteClicked(coche)"></app-coche>
+    </div>
 </ion-content>
-<table>
-    <thead>
-        <tr>
-            <th>Marca</th>
-            <th>Modelo</th>
-            <th>Color</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let coche of coches">
-            <td>{{ coche.marca }}</td>
-            <td>{{ coche.model }}</td>
-            <td>{{ coche.color }}</td>
-        </tr>
-    </tbody>
-</table>
